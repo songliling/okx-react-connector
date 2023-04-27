@@ -1,0 +1,38 @@
+{
+  "name": "@songliling/okx-react-connector",
+  "version": "1.0.0",
+  "description": "OKX Extension connector for the web3-react library",
+  "license": "BSD-3-Clause",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:songliling/okx-react-connector.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist/*"
+  ],
+  "keywords": [
+    "web3-react",
+    "okx-wallet"
+  ],
+  "type": "commonjs",
+  "types": "./dist/index.d.ts",
+  "main": "./dist/index.js",
+  "exports": "./dist/index.js",
+  "scripts": {
+    "start": "rollup -c --watch",
+    "build": "rollup -c",
+    "build:prod": "rollup -c --environment BUILD:production",
+    "lint": "eslint --fix -c ./.eslintrc.js \"src/**/*.ts*\""
+  },
+  "dependencies": {
+    "@web3-react/types": "8.1.2-beta.0"
+  },
+  "devDependencies": {
+    "@ethersproject/experimental": "5.7.0",
+    "@ethersproject/providers": "5.7.2",
+    "@web3-react/store": "8.1.2-beta.0"
+  }
+}
